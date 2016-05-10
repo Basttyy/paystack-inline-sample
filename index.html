@@ -1,4 +1,13 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<script>
+// conditionally load bootstrap from maxcdn
+var $span = $('<span class="bs hidden"></span>');
+var $bs = $('body').append($span).find('.bs');
+
+if ($bs.css('display') !== 'none') {
+	$("head").append('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />');
+}
+$bs.remove();
+</script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" />
 <script>
 // load jQuery 1.12.3 if not loaded
