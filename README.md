@@ -20,11 +20,11 @@ To use on WordPress, download and install [wp-paystack-inline.zip](wp-paystack-i
     - Replace `NGN_AMT` with the amount in naira to be charged (all digits, no commas). 
         - Note that the cost is optional and a field will be provided for the customer to enter a value if it is not specified.
     - Replace `MESSAGE` with the message you want to display to your visitor after a successful payment. 
-        - Note that the message is optional and a default of *You will also get a confirmation message in the mail.* will be displayed.
+        - Note that the message is optional and a default of `You will also get a confirmation message in the mail.` will be displayed.
     
 Valid samples include:
-* [paystackinline costinnaira="10400"]
-* [paystackinline costinnaira="3000" message="Thanks for giving!"]
-* [paystackinline message="Arigato!"]
-* [paystackinline]
+* `[paystackinline costinnaira="10400"]`
+* `[paystackinline costinnaira="3000" message="Thanks for giving!"]`
+* `[paystackinline message="Arigato!"]`
+* `[paystackinline]`
 
