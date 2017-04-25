@@ -29,7 +29,9 @@ $bs.remove();
   <div class="form-group text-right call-to-action">
     <button id="payment-btn" class="btn btn-block green-btn large-btn trans" style="margin: 0">Make Payment</button>
   </div>
-  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script src="https://beta.paystack.com/assets/payment/js/inline.js" ></script>
+<!-- <script src="https://js.paystack.co/v1/inline.js"></script> -->
+
 </form>
 <div id="success-message" class="row animated fadeInUp hidden col-md-12">
   <div class="call-to-action text-center mb">
@@ -113,8 +115,10 @@ $bs.remove();
         }
 
         paystackHandler = PaystackPop.setup({
-          key: 'pk_live_3223432j3328nmdsad233tIshFeQd4XMUh',
+          key: 'pk_live_2bf31d4aea08ab31f5d0cfd645c7e4f67025d259',
           email: $('#payment-email').val(),
+		currency: 'GHS',
+		bank:'false',
           amount: parseFloat(payment_value) * 100,
           onClose: function () {
             payment_btn.attr('disabled', false).html('Make Payment');
