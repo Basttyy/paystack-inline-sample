@@ -84,7 +84,7 @@ $bs.remove();
         var amount = $(this).val();
         var parent = $(this).parent();
         var amount_helper = $(this).siblings('.help-block');
-        if (amount < 0.00) {
+        if (amount <= 0.00) {
           parent.addClass('has-error');
           amount_helper.removeClass('hidden');
         } else {
@@ -107,7 +107,7 @@ $bs.remove();
           return;
         }
 
-        if (payment_value < 100) {
+        if (payment_value <= 0) {
 
           $('.payment-form.amount').addClass('has-error');
           $('.amount .help-block').removeClass('hidden');
